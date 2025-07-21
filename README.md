@@ -22,7 +22,7 @@ Visit the live site here 👉 [https://mhaques.co.uk]
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Styling:** Tailwind CSS
 - **Deployment:** GitHub Pages
-- *(Optional)* Backend/Forms: Netlify Forms / EmailJS / Firebase
+- *(Optional)* Backend/Forms: Netlify Forms
 
 ---
 
