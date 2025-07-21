@@ -19,8 +19,8 @@ Visit the live site here 👉 [https://mhaques.co.uk]
 
 ## 🛠 Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript (or React/Vue if applicable)
-- **Styling:** Tailwind CSS / Bootstrap / SCSS *(choose based on your setup)*
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Styling:** Tailwind CSS
 - **Deployment:** GitHub Pages
 - *(Optional)* Backend/Forms: Netlify Forms / EmailJS / Firebase
 
