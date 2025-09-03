@@ -13,7 +13,7 @@ Visit the live site here 👉 [https://mhaques.co.uk]
 - 🛠️ Dynamic Projects section to showcase work
 - 📫 Contact form for easy communication
 - 🎨 Responsive design, mobile-friendly
-- 🌙 Dark/light theme support *(To be implemented)*
+- 🌙 Dark/light theme support *(Little buggy - to be fixed)*
 
 ---
 
@@ -22,7 +22,7 @@ Visit the live site here 👉 [https://mhaques.co.uk]
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Styling:** Tailwind CSS
 - **Deployment:** GitHub Pages
-- *(Optional)* Backend/Forms: Netlify Forms
+- **Backend/Forms:** Netlify Forms
 
 ---
 
