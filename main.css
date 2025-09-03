@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+/* Light Theme */
+body {
+  --bg-color: #ffffff;
+  --text-color: #374151;
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+}
+
+/* Dark Theme */
+body.dark {
+  --bg-color: #1f2937;
+  --text-color: #e5e7eb;
+  --primary-color: #2563eb;
+  --secondary-color: #3b82f6;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
