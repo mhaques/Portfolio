@@ -2,9 +2,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.querySelector('.fixed button');
     
-    // Check for saved theme preference, otherwise use system preference
-    if (localStorage.getItem('theme') === 'dark' || 
-        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    // Set dark mode as default if no preference is saved
+    if (!localStorage.getItem('theme')) {
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.classList.add('dark');
+    } else if (localStorage.getItem('theme') === 'dark') {
         document.documentElement.classList.add('dark');
     }
 
