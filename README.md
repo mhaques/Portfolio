@@ -13,7 +13,7 @@ Visit the live site here 👉 [https://mhaques.co.uk]
 - 🛠️ Dynamic Projects section to showcase work
 - 📫 Contact form for easy communication
 - 🎨 Responsive design, mobile-friendly
-- 🌙 Dark/light theme support *(Little buggy - to be fixed)*
+- 🌙 Dark/light theme support 
 
 ---
 
