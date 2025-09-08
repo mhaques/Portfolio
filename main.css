@@ -1,40 +1,75 @@
 @import "tailwindcss";
 
-/* Light Theme */
-body {
-  --bg-color: #ffffff;
-  --text-color: #374151;
-  --primary-color: #3b82f6;
-  --secondary-color: #60a5fa;
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
-/* Dark Theme */
-body.dark {
-  --bg-color: #1f2937;
-  --text-color: #e5e7eb;
-  --primary-color: #2563eb;
-  --secondary-color: #3b82f6;
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Apply theme variables */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
 }
 
-a {
-  color: var(--primary-color);
+@keyframes success-glow {
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+    100% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
 }
 
-a:hover {
-  color: var(--secondary-color);
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
-button {
-  background-color: var(--primary-color);
-  color: var(--text-color);
+/* Animation Classes */
+.animate-float {
+    animation: float 3s ease-in-out infinite;
 }
 
-button:hover {
-  background-color: var(--secondary-color);
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animation-delay-300 {
+    animation-delay: 0.3s;
+}
+
+.animation-delay-600 {
+    animation-delay: 0.6s;
+}
+
+.animation-delay-1000 {
+    animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+.success-glow {
+    animation: success-glow 1s ease-in-out;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
 }
