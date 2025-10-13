@@ -31,13 +31,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/brands.min.css" integrity="sha512-apX8rFN/KxJW8rniQbkvzrshQ3KvyEH+4szT3Sno5svdr6E/CP0QE862yEeLBMUnCqLko8QaugGkzvWS7uNfFQ==" crossorigin="anonymous" />
     <script>
-      (function() {
+      (function () {
         try {
-          var theme = localStorage.getItem('theme');
-          if (theme === 'dark' || theme === null) {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
+          var stored = localStorage.getItem('theme');
+          var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var shouldUseDark = stored === 'dark' || (stored === null && systemPrefersDark);
+          document.documentElement.classList.toggle('dark', !!shouldUseDark);
+
+          // Keep in sync with system when there is no user override stored
+          if (stored === null && window.matchMedia) {
+            var mql = window.matchMedia('(prefers-color-scheme: dark)');
+            var onChange = function (e) {
+              if (localStorage.getItem('theme') === null) {
+                document.documentElement.classList.toggle('dark', e.matches);
+              }
+            };
+            try { mql.addEventListener('change', onChange); } catch (_) { mql.addListener(onChange); }
           }
         } catch (e) { /* no-op */ }
       })();
