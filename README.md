@@ -33,6 +33,10 @@ Project layout (partial):
 
 ## 🔧 Development
 
+### Requirements
+- Node.js 18+ (recommended)
+
+### Commands
 - Install dependencies (uses package-lock):
 ```bash
 npm ci
@@ -54,6 +58,11 @@ npm run preview
 ```
 
 Note: The dist/ folder is build output; it’s removed from the repo for local testing.
+
+### Tailwind notes
+- Config: tailwind.config.cjs (class-based dark mode)
+- CSS entry: src/index.css includes `@config "../tailwind.config.cjs";` and `@import "tailwindcss";`
+- Vite plugin loads Tailwind with an explicit config path.
 
 ---
 
